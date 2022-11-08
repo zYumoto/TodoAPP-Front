@@ -1,13 +1,16 @@
-import React from "react";
-import { Router, Route, Redirect, hashHistory } from 'react-router'
+import React from 'react'
+import { Route, Redirect } from 'react-router'
+import { HashRouter } from 'react-router-dom';
 
-import Todo from '../todo/todo'
-import About from '../about/about'
+import Todo from '../todo/Todo'
+import About from '../about/About'
 
-export default props => (
-    <Router history={hashHistory}>
+const Routes = props => (
+    <HashRouter>
+        <Redirect from='*' to='/todos' />
         <Route path='/todos' component={Todo} />
         <Route path='/about' component={About} />
-        <Redirect from="*" to= '/todos' />
-    </Router>
+    </HashRouter>
 )
+
+export default Routes
