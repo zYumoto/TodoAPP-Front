@@ -1,16 +1,14 @@
 require('bootstrap/dist/css/bootstrap.min.css')
 require('font-awesome/css/font-awesome.min.css')
 import React from "react"
-import Todo from '../todo/todo'
-import About from '../about/about'
+import Routes from './Routes'
 import Menu from '../template/Menu'
 
 
 function App() {
     <div className="container">
+    <Routes/>
     <Menu/>
-    <Todo/>
-    <About/>
 </div>
 }
 
